@@ -2,6 +2,7 @@
 %define		snap	20030925
 %define		module	rcsparse
 Summary:	Module for parsing RCS files
+Summary(pl):	Modu³ do analizy plików RCS
 Name:		python-%{module}
 Version:	0.1
 Release:	0.%{snap}.1
@@ -19,10 +20,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 rcsparse.py is a Python module parsing RCS files.
 
+%description -l pl
+rcsparse.py to modu³ Pythona do analizy plików RCS.
+
 %prep
 %setup -q -n %{module}
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
