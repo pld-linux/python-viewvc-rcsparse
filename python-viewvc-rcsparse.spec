@@ -1,5 +1,5 @@
 %include	/usr/lib/rpm/macros.python
-%define		snap	20030925
+%define		snap	20031026
 %define		module	rcsparse
 Summary:	Module for parsing RCS files
 Summary(pl):	Modu³ do analizy plików RCS
@@ -10,7 +10,7 @@ License:	GPL
 Group:		Libraries/Python
 # http://cvs.sourceforge.net/viewcvs.py/viewcvs/viewcvs/lib/vclib/ccvs/rcsparse/
 Source0:	%{module}-%{snap}.tar.gz
-# Source0-md5:	7cabbe1b8f387a22bbfe7948c2cd95e9
+# Source0-md5:	dbf7cf8f43c4941d95834a0caf0dff86
 URL:		http://viewcvs.sourceforge.net/
 BuildRequires:	python-modules
 %pyrequires_eq	python
