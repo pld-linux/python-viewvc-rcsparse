@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		snap	20031026
 %define		module	rcsparse
 Summary:	Module for parsing RCS files
