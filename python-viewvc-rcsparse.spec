@@ -4,7 +4,7 @@ Summary:	Module for parsing RCS files
 Summary(pl):	Modu³ do analizy plików RCS
 Name:		python-%{module}
 Version:	0.1
-Release:	0.%{snap}.2
+Release:	0.%{snap}.3
 License:	GPL
 Group:		Libraries/Python
 # http://cvs.sourceforge.net/viewcvs.py/viewcvs/viewcvs/lib/vclib/ccvs/rcsparse/
