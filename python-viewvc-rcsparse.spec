@@ -5,7 +5,7 @@ Summary:	Module for parsing RCS files
 Summary(pl):	Modu³ do analizy plików RCS
 Name:		python-%{module}
 Version:	0.1
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	GPL
 Group:		Libraries/Python
 # http://cvs.sourceforge.net/viewcvs.py/viewcvs/viewcvs/lib/vclib/ccvs/rcsparse/
@@ -28,17 +28,19 @@ rcsparse.py to modu³ Pythona do analizy plików RCS.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitedir}/%{module}
+install -d $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}
 
-install *.py	$RPM_BUILD_ROOT%{py_sitedir}/%{module}
+install *.py	$RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}
 
-%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
-%py_comp $RPM_BUILD_ROOT%{py_sitedir}
+%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
+%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}
+
+rm $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}/*.py
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{py_sitedir}/%{module}
-%{py_sitedir}/%{module}/*.py[co]
+%dir %{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{module}/*.py[co]
