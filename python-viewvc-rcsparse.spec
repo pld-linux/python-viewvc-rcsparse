@@ -1,7 +1,7 @@
 %define		snap	20031026
 %define		module	rcsparse
 Summary:	Module for parsing RCS files
-Summary(pl.UTF-8):   Moduł do analizy plików RCS
+Summary(pl.UTF-8):	Moduł do analizy plików RCS
 Name:		python-%{module}
 Version:	0.1
 Release:	0.%{snap}.3
