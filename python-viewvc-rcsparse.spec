@@ -12,6 +12,7 @@ Source0:	%{module}-%{snap}.tar.gz
 # Source0-md5:	dbf7cf8f43c4941d95834a0caf0dff86
 URL:		http://viewcvs.sourceforge.net/
 BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,5 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/%{module}/*.py[co]
+%dir %{py_sitescriptdir}/rcsparse
+%{py_sitescriptdir}/rcsparse/*.py[co]
