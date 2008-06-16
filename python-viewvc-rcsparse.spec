@@ -1,16 +1,18 @@
-%define		snap	20031026
+%bcond_without	tests
+#
+%define		snap	20080616
 %define		module	rcsparse
 Summary:	Module for parsing RCS files
 Summary(pl.UTF-8):	Moduł do analizy plików RCS
 Name:		python-%{module}
 Version:	0.1
-Release:	0.%{snap}.4
+Release:	0.%{snap}.1
 License:	GPL
 Group:		Libraries/Python
-# http://cvs.sourceforge.net/viewcvs.py/viewcvs/viewcvs/lib/vclib/ccvs/rcsparse/
-Source0:	%{module}-%{snap}.tar.gz
-# Source0-md5:	dbf7cf8f43c4941d95834a0caf0dff86
-URL:		http://viewcvs.sourceforge.net/
+# http://guest@http://viewvc.tigris.org/svn/viewvc/trunk/lib/vclib/ccvs/rcsparse/
+Source0:	%{module}-%{snap}.tar.bz2
+# Source0-md5:	b0fce6886163f58a6ba3816b9dc25e69
+URL:		http://www.viewvc.org/
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
@@ -25,6 +27,9 @@ rcsparse.py to moduł Pythona do analizy plików RCS.
 
 %prep
 %setup -q -n %{module}
+
+%build
+%{?with_tests:%{__python} run-tests.py}
 
 %install
 rm -rf $RPM_BUILD_ROOT
