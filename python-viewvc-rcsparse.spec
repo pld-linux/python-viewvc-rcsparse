@@ -4,7 +4,7 @@
 %define		module	rcsparse
 Summary:	Module for parsing RCS files
 Summary(pl.UTF-8):	Moduł do analizy plików RCS
-Name:		python-%{module}
+Name:		python-viewvc-%{module}
 Version:	0.1
 Release:	0.%{snap}.1
 License:	GPL
